@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+
+
+.col-1-of-2{
+    background-color: rgb(246, 245, 245);
+ 
+}
+.row{
+
+    display: grid;
+    grid-template-columns: 1fr ;
+    column-gap: 5rem;
+    max-width:$grid-width;
+    margin-inline: auto;
+
+}

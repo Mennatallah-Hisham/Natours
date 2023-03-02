@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.frow{
+  
+    @include flex-center;
+    gap:5rem;
+    flex-wrap: wrap;
+
+    &__item{
+        width:30rem;
+
+    }
+
+}

@@ -1,0 +1,162 @@
+@use "../abstracts" as *;
+
+
+.card{
+    perspective: 100rem;
+    -moz-perspective: 150rem;
+    height: 45rem;
+    max-width: 100%;
+
+ 
+   position: relative;
+
+  &__side{
+    transition: all 1s ease;
+    height: 100%;
+    width:100%;
+    color:#000;
+    font-size: 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+    border-radius:$border-radius;
+    overflow: hidden;
+
+    &--front{
+      background-color:$clr-white;
+   
+    }
+    &--back{
+      background-color: rgb(56, 5, 56);
+      transform:rotateY(180deg);
+      box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+
+    
+      &-1{
+        background-image: linear-gradient(to left top,$clr-secondary,$clr-secondary-light);
+
+      }
+
+      &-3{
+        background-image: linear-gradient(to left top,$clr-tertiary,$clr-tertiary-light);
+      }
+      &-2{
+        background-image: linear-gradient(to left top,$clr-primary-shade,$clr-primary-tint);
+      }
+    }
+ 
+  }
+
+  &:hover &__side--front{
+    transform:rotateY(-180deg);
+ 
+
+
+}
+
+&:hover &__side--back{
+  transform: rotateY(0deg);
+}
+
+
+&__img{
+  background-position: center;
+  background-size: cover;
+  height: 40%;
+  
+  clip-path: polygon(0 0 , 100% 0,100% 80% ,0 100%);
+    
+
+  &--1{
+    background-image: linear-gradient(to left top,rgba($clr-secondary,0.5),rgba($clr-secondary-light,0.3)) ,url("../img/nat-5.jpg");
+  }
+  &--3{
+    background-image: linear-gradient(to left top,rgba($clr-tertiary,0.5),rgba($clr-tertiary-light,0.3)) ,url("../img/nat-6.jpg");
+  }
+  &--2{
+    background-image: linear-gradient(to left top,rgba($clr-primary,0.5),rgba($clr-primary-tint,0.3)) ,url("../img/nat-7.jpg");
+  }
+}
+
+
+&__heading{
+  font-size:2.4rem;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+  color:$clr-white;
+  position: absolute;
+  top:12rem;
+  right:1rem;
+  width:55%;
+
+
+
+}
+
+&__heading-span{
+  
+  padding:0.5rem 2rem;
+  -webkit-box-decoration-break: clone;
+  &--1{
+    background-image: linear-gradient(to left top,$clr-secondary,rgba($clr-secondary-light,0.8));
+  }
+  &--2{
+    background-image: linear-gradient(to left top,$clr-primary,$clr-primary-tint)
+  }
+  &--3{
+    background-image: linear-gradient(to left,$clr-tertiary,$clr-tertiary-light);
+
+  }
+}
+
+
+&__details{
+   ul{
+       
+
+    width:80%;
+
+margin-top:3rem;
+margin-inline: auto; 
+text-align: center;
+font-size: 1.6rem; 
+
+
+    li:not(:last-child){
+      padding:1rem 0;
+      border-bottom: 1px solid gray;
+
+    }
+}
+
+}
+
+&__cta{
+
+  height: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  @include flex-col-center();
+
+
+ 
+}
+&__price-box{
+  height: 60%;
+  @include flex-col-center();
+  gap:4rem;
+  color:$clr-white;
+}
+
+&__price-value{
+  font-weight: 100;
+  font-size: 6rem;
+}
+
+&__price-only{
+font-size: 1.6rem;
+  text-transform: uppercase;
+}
+}

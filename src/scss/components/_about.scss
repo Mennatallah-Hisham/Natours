@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.about{
+    &__content{
+        @include flex-center;
+        text-align: center;
+ 
+    }
+    &__txt{
+        padding:0 1.5rem;
+        max-width: 60rem;
+    }
+ 
+}
+
+@media (min-width:44em){
+
+    
+.about{
+    &__content{
+    text-align: left;
+    gap:4rem;
+    }
+
+    &__txt{
+        width:50%;
+        
+    }
+}
+}

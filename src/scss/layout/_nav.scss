@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+@use "../base/animations" as *;
+.nav{
+  
+  
+
+height: 100vh;
+width:100%;
+position: absolute;
+top:0;
+left:0;
+z-index: 4;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+
+    &__button{
+       display: block;
+       text-align: center;
+      
+        background-color: $clr-white;
+        border-radius: 50%;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top:3rem;
+        right:3rem;
+        z-index: 8;
+        cursor: pointer;
+        box-shadow: 0 1rem 3rem #000;
+       
+    }
+    &__icon{
+        width:4rem;
+        height: 4rem;
+
+    }
+
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1.5rem;
+        z-index: 10;
+
+
+    
+  
+
+    }
+    
+   
+    &__link{
+        &:link,
+        &:visited{
+          
+            font-size: 2.4rem;
+            color:$clr-white;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            padding: 0 2rem;
+            background-image: linear-gradient(120deg,transparent 0%, transparent 50%, $clr-white 50%);
+            background-size: 220%;
+            background-repeat: no-repeat;
+            transition:  all 0.5s;
+
+          
+        }
+
+        &:hover,
+        &:active{
+
+            background-position: 100%;
+            color:$clr-primary-shade;
+        }
+  
+
+     
+     
+
+    }
+
+    
+
+
+}
+
+
+
+
+.nav-wrapper{
+   display: none;
+    height:100vh;
+    width:100%;
+  
+    background-image:  radial-gradient($clr-primary-tint,$clr-primary-shade);
+    z-index: 3;
+    position: fixed;
+    top:0;
+    left:0;
+
+
+}
+
+
+.open-nav{
+    display: block;
+}

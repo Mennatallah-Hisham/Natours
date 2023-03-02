@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.form{
+
+    @include flex-col-center;
+    gap:3rem;
+    padding:1rem;
+&__group{
+    @include flex-col-center;
+    gap:1rem;
+
+    width:90%;
+
+}
+    &__input{
+        font-family: inherit;
+        font-size: 1.6rem;
+        padding:0.8rem  2rem;
+        border:none;
+        width:100%;
+        border-bottom: 3px solid transparent;
+        color:inherit;
+
+        &:focus{
+            outline:none;
+            border-bottom: 3px solid $clr-primary;
+            box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid rgb(255, 55, 0);
+        }
+
+        &::placeholder{
+text-transform: capitalize;
+color:#999;
+        }
+    }
+
+    &__label{
+        padding:0 2rem;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all 0.5s;
+     
+
+    }
+
+    &__input:placeholder-shown + &__label{
+       opacity:0;
+       visibility: hidden;
+       transform: translateY(-4rem);
+    }
+
+    &__radio-label{
+        @include flex-center;
+        gap:1rem;
+    }
+ 
+  
+        &__radio-input{
+   display: none;
+
+  
+        }
+        &__radio-btn{
+            display: inline-block;
+            width:1.5rem;
+            height:1.5rem;
+            border-radius: 50%;
+            outline:3px solid $clr-primary;
+            outline-offset:0.3rem;
+         
+        }
+
+        &__radio-label{
+            font-size: 1.6rem;
+            cursor: pointer;
+            color:$clr-primary-shade;
+        }
+    
+}
+
+.form__radio-input:checked ~ .form__radio-label  .form__radio-btn{
+    background-color:$clr-primary;
+    box-shadow: rgba($clr-white, 0.7) 2px 7px 29px 4px;
+ 
+}
+
+@media (min-width:44em){
+    .form__group{
+
+        align-items: flex-start;
+    }
+}

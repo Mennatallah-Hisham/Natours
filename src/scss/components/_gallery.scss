@@ -1,0 +1,24 @@
+
+@use "../abstracts" as *;
+.about__gallery{
+  
+  display: none;
+
+
+
+}
+.gallery__img{
+ 
+    max-width: 100%;
+    display: block;
+}
+
+@media (min-width:44em){
+
+    .about__gallery{
+        width:30%;
+        display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+    }
+}

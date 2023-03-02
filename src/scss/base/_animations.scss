@@ -1,0 +1,73 @@
+@keyframes moveInLeft
+ {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+ 80%{
+    opacity: 0.2;
+ }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes moveInRight 
+{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.2;
+     }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes mjnjnjjight 
+{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.2;
+     }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes navLink {
+    0%{
+        background-image: linear-gradient(120deg,transparent 0% , transparent 50% , white
+        50%);
+       
+    }
+    25%{
+        background-image: linear-gradient(120deg,transparent 0% , transparent 25% ,white 25, white
+        50%);
+       
+    }
+    50%{
+        background-image: linear-gradient(120deg,transparent 0% , white 25% ,white 25, white
+        50%);
+    }
+    75%{
+        background-image: linear-gradient(120deg,transparent 0% , white 50% , white
+        50%);
+    }
+    100% {
+        background-image: linear-gradient(120deg,white 0% , white 50% , white
+        50%);
+    }
+}
