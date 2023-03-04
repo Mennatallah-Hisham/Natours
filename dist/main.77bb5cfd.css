@@ -847,6 +847,7 @@ strong {
   right: 0rem;
   font-size: 5rem;
   padding: 1rem;
+  color: #000;
 }
 .popup__close:active, .popup__close:hover {
   color: #7ed567;
@@ -898,6 +899,9 @@ strong {
   }
   .popup__txt {
     font-size: 2.4rem;
+  }
+  .popup__btn {
+    font-size: 2.4rem !important;
   }
   .popup__close {
     right: 1rem;
